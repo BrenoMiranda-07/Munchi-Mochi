@@ -1,0 +1,202 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    /* Set font family for the entire page */
+}
+
+body {
+    background-color: #fff8f4;
+    /* Light peach background */
+    color: #333;
+    /* Default text color */
+    min-height: 100vh;
+    /* Ensure body takes at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    /* Allow vertical layout for body elements */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    /* Ensures the center links are placed in the middle */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #d96d6f;
+}
+
+.nav-cart {
+    position: relative;
+    margin-left: 20px;
+    /* Added some space between cart and other navbar items */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #fff;
+    /* White background */
+    padding: 30px 40px;
+    /* Padding inside footer */
+    border-top: 1px solid #eee;
+    /* Light border on top */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    /* Flex layout for footer content */
+    justify-content: space-between;
+    /* Space out the content */
+    align-items: center;
+    /* Center the content vertically */
+    flex-wrap: wrap;
+    /* Allow content to wrap on smaller screens */
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Flex layout for links */
+    gap: 20px;
+    /* Space between links */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    padding: 0;
+    /* Remove padding */
+}
+
+.footer-links a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #333;
+    /* Text color */
+    font-weight: 500;
+    /* Medium font weight */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+/* Footer Link Hover Effect */
+.footer-links a:hover {
+    color: #d96d6f;
+    /* Change color on hover */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    height: 40px;
+    /* Logo size */
+}
+
+/* Footer Social Icons */
+.footer-socials {
+    margin-top: 15px;
+    /* Space above social icons */
+    display: flex;
+    /* Flex layout for icons */
+    gap: 15px;
+    /* Space between icons */
+}
+
+.footer-socials a {
+    color: #333;
+    /* Icon color */
+    font-size: 1.5rem;
+    /* Icon size */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+/* Footer Social Icon Hover Effect */
+.footer-socials a:hover {
+    color: #d96d6f;
+    /* Change color on hover */
+}
+
+.payment-main {
+    padding: 110px 20px;
+    background-color: #fffaf4;
+    text-align: center;
+}
+
+.payment-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid #f7d89c;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.payment-container h1 {
+    font-size: 2rem;
+    color: #d4963e;
+    margin-bottom: 15px;
+}
+
+.notice {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.bank-details {
+    background-color: #fff4d6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.bank-details h2 {
+    margin-bottom: 10px;
+    color: #af7c1b;
+}
+
+.bank-details p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+.thanks-message p {
+    font-style: italic;
+    color: #777;
+}
