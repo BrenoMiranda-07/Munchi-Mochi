@@ -17,11 +17,11 @@ function displayCartItems() {
     cartItemsList.innerHTML = '';
 
     const imageMap = {
-        "Mango Mochi": "../ASSETS/mango-mochi.png",
-        "Strawberry Mochi": "../ASSETS/strawberry-mochi.png",
-        "Matcha Mochi": "../ASSETS/matcha-mochi.png",
-        "Hokey Pokey Mochi": "../ASSETS/hockey-pockey-mochi.png",
-        "Surprise Mochi": "../ASSETS/anything-mochi.png"
+        "Mango Mochi": "mango-mochi.png",
+        "Strawberry Mochi": "strawberry-mochi.png",
+        "Matcha Mochi": "matcha-mochi.png",
+        "Hokey Pokey Mochi": "hockey-pockey-mochi.png",
+        "Surprise Mochi": "anything-mochi.png"
     };
 
     if (cart.length === 0) {
@@ -38,7 +38,7 @@ function displayCartItems() {
         li.classList.add('cart-item');
 
         const itemImage = document.createElement('img');
-        itemImage.src = imageMap[item.name] || '../ASSETS/placeholder.png';
+        itemImage.src = imageMap[item.name] || 'placeholder.png';
         itemImage.alt = item.name;
         itemImage.classList.add('cart-item-image');
 
