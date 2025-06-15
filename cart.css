@@ -1,0 +1,402 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    /* Set font family for the entire page */
+}
+
+body {
+    background-color: #fff8f4;
+    /* Light peach background */
+    color: #333;
+    /* Default text color */
+    min-height: 100vh;
+    /* Ensure body takes at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    /* Allow vertical layout for body elements */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo, links, and cart */
+    align-items: center;
+    /* Vertically center items */
+    padding: 15px 40px;
+    /* Add padding to navbar */
+    background-color: #fff;
+    /* White background for navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    position: sticky;
+    /* Make navbar sticky at the top */
+    top: 0;
+    /* Stick to top */
+    z-index: 1000;
+    /* Ensure it stays above other content */
+}
+
+.logo img {
+    height: 50px;
+    /* Logo size */
+}
+
+/* Centering navigation links */
+.nav-center .nav-links {
+    list-style: none;
+    display: flex;
+    /* Display nav links horizontally */
+    gap: 30px;
+    /* Space between nav links */
+}
+
+/* Navbar Link Styles */
+.nav-links li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #333;
+    /* Text color */
+    font-weight: 500;
+    /* Medium font weight */
+    transition: color 0.2s;
+    /* Smooth color transition on hover */
+    position: relative;
+    /* For the underline effect */
+}
+
+/* Navbar Link Hover Effect */
+.nav-links li a:hover {
+    color: #d96d6f;
+    /* Change color on hover */
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    /* Initially no underline */
+    height: 2px;
+    /* Underline height */
+    background-color: #d96d6f;
+    /* Underline color */
+    transition: width 0.3s ease;
+    /* Animate the underline width */
+}
+
+/* Navbar Link Hover Underline Effect */
+.nav-links li a:hover::after {
+    width: 100%;
+    /* Expand underline on hover */
+}
+
+/* Cart Icon and Badge Styles */
+.nav-cart {
+    position: relative;
+    /* Position the cart icon relative to its parent */
+}
+
+.cart-link {
+    color: #333;
+    /* Cart icon color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.5rem;
+    /* Icon size */
+    position: relative;
+    /* Position the cart icon relative to its parent */
+}
+
+.cart-count {
+    background-color: #d96d6f;
+    /* Red background for count */
+    color: white;
+    /* White text for count */
+    font-size: 0.8rem;
+    /* Smaller font for count */
+    border-radius: 50%;
+    /* Circle shape */
+    padding: 2px 7px;
+    /* Padding inside the circle */
+    position: absolute;
+    /* Position it absolutely within the cart icon */
+    top: -10px;
+    right: -10px;
+    /* Position the count at the top-right corner */
+}
+
+/* Main Content Styles */
+.cart-main {
+    flex: 1;
+    /* Take up available space */
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: center;
+    /* Center content horizontally */
+    padding: 40px 20px;
+    /* Padding around the content */
+    background-color: #fff8f4;
+    /* Background color for main section */
+}
+
+/* Cart Box Styles */
+.cart-box {
+    display: flex;
+    /* Flex layout for left and right sections */
+    justify-content: space-between;
+    /* Space out the sections */
+    width: 80%;
+    /* Limit the width */
+    max-width: 1000px;
+    /* Maximum width */
+    background-color: #fff;
+    /* White background */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 30px;
+    /* Padding inside the box */
+    gap: 40px;
+    /* Space between left and right sections */
+}
+
+/* Cart Section Styling */
+.cart-left,
+.cart-right {
+    width: 48%;
+    /* Make each section take up 48% of space */
+    background-color: #fff;
+    /* White background */
+    padding: 20px;
+    /* Padding inside the sections */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* Section Headings */
+.cart-left h2,
+.cart-right h2 {
+    margin-bottom: 25px;
+    /* Space below the heading */
+    color: #d96d6f;
+    /* Heading color */
+    text-align: center;
+    /* Center the headings */
+    font-size: 24px;
+    /* Font size for headings */
+}
+
+/* Cart Items List */
+#cart-items-list {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    /* Remove padding */
+}
+
+/* Individual Cart Item Styling */
+.cart-item {
+    display: flex;
+    /* Flex layout for item content */
+    align-items: center;
+    /* Center the content vertically */
+    gap: 12px;
+    /* Space between image and text */
+    padding: 15px 0;
+    /* Padding inside each item */
+    border-bottom: 1px solid #ddd;
+    /* Border between items */
+}
+
+/* Cart Item Image Styling */
+.cart-item-image {
+    width: 60px;
+    /* Image size */
+    height: 60px;
+    object-fit: cover;
+    /* Ensure image covers the box */
+    border-radius: 8px;
+    /* Rounded corners for image */
+}
+
+/* Cart Item Info Styling */
+.cart-item-info {
+    flex: 1;
+    /* Allow it to take up remaining space */
+    display: flex;
+    /* Flex layout for text */
+    flex-direction: column;
+    /* Stack text vertically */
+    gap: 4px;
+    /* Space between text */
+}
+
+.cart-item-info p {
+    margin: 0;
+    /* Remove margin from paragraphs */
+    color: #333;
+    /* Text color */
+}
+
+/* Button Styling (Common for Cart and Submit Buttons) */
+button,
+.submit-btn {
+    margin-top: 20px;
+    /* Space above the button */
+    width: 100%;
+    /* Make button take full width */
+    background-color: #d96d6f;
+    /* Button color */
+    color: white;
+    /* White text */
+    padding: 14px;
+    /* Padding inside button */
+    font-size: 1rem;
+    /* Button text size */
+    border: none;
+    /* Remove border */
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Smooth color transition */
+}
+
+/* Button Hover Effect */
+button:hover,
+.submit-btn:hover {
+    background-color: #c55e60;
+    /* Darker color on hover */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #fff;
+    /* White background */
+    padding: 30px 40px;
+    /* Padding inside footer */
+    border-top: 1px solid #eee;
+    /* Light border on top */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    /* Flex layout for footer content */
+    justify-content: space-between;
+    /* Space out the content */
+    align-items: center;
+    /* Center the content vertically */
+    flex-wrap: wrap;
+    /* Allow content to wrap on smaller screens */
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Flex layout for links */
+    gap: 20px;
+    /* Space between links */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    padding: 0;
+    /* Remove padding */
+}
+
+.footer-links a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #333;
+    /* Text color */
+    font-weight: 500;
+    /* Medium font weight */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+/* Footer Link Hover Effect */
+.footer-links a:hover {
+    color: #d96d6f;
+    /* Change color on hover */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    height: 40px;
+    /* Logo size */
+}
+
+/* Footer Social Icons */
+.footer-socials {
+    margin-top: 15px;
+    /* Space above social icons */
+    display: flex;
+    /* Flex layout for icons */
+    gap: 15px;
+    /* Space between icons */
+}
+
+.footer-socials a {
+    color: #333;
+    /* Icon color */
+    font-size: 1.5rem;
+    /* Icon size */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+/* Footer Social Icon Hover Effect */
+.footer-socials a:hover {
+    color: #d96d6f;
+    /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-box {
+        flex-direction: column;
+        /* Stack left and right sections vertically */
+    }
+
+    .cart-left,
+    .cart-right {
+        width: 100%;
+        /* Make sections take full width */
+        padding: 15px;
+        /* Reduce padding for mobile */
+    }
+
+    .nav-links {
+        gap: 20px;
+        /* Space between nav links on smaller screens */
+        flex-direction: column;
+        /* Stack links vertically */
+    }
+
+    .nav-cart {
+        margin-left: 0;
+        /* Remove left margin */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Stack footer items vertically */
+        align-items: flex-start;
+        gap: 20px;
+        /* Space between footer items */
+    }
+
+    .footer-links {
+        gap: 15px;
+        /* Space between footer links */
+    }
+}
